@@ -3,7 +3,7 @@
 ## Quick start
 
 1. You need to install [docker](https://docs.docker.com/install/) and [docker compose](https://docs.docker.com/compose/install/).
-
+  
   Once installed, you should be able to very by opening terminal (CLI) 
   on your machine and running
   
@@ -27,7 +27,7 @@
   ```
   cd drupal-gtd-dev
   docker-compose up -d --build
-  docker exec -it web composer install
+  docker exec -it webgtd composer install
   ```
   
   You can now access [website](http://0.0.0.0:6060) and [phpMyAdmin](http://0.0.0.0:7070).

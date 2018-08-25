@@ -11,9 +11,9 @@ services:
       - MYSQL_DATABASE=drupal8_dgtddev
       - MYSQL_ROOT_PASSWORD=rootpa3s
     restart: always
-  web:
+  webgtd:
     image: testudio/drupal8-web-test:php7.2
-    container_name: web
+    container_name: webgtd
     links:
       - mysql
     ports:
