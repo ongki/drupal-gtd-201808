@@ -32,6 +32,8 @@
   
   You can now access [website](http://0.0.0.0:6060) and [phpMyAdmin](http://0.0.0.0:7070).
   
+  Database credentials can be found in `docker-compose.yml` file.
+  
 For more information see [documentation](./docs/README.md).
 
 ## Links
