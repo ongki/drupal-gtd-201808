@@ -27,16 +27,16 @@ git clone git@gitlab.com:testudio/drupal-gtd-dev.git
 ```
 cd drupal-gtd-dev
 docker-compose up -d --build
-docker exec -it web composer install
+docker exec -it webgtd composer install
 ```
 
 You can now access [website](http://0.0.0.0:6060) and [phpMyAdmin](http://0.0.0.0:7070).
 
-4. Install Drupal website
+4. Install Drupal website by running
 
 ```
-docker exec -it web composer install
-docker exec -it web composer site-install-docker-ci
+docker exec -it webgtd composer install
+docker exec -it webgtd composer site-install-docker
 ```
 
 ## Optional. Continuous integration.
@@ -44,13 +44,13 @@ docker exec -it web composer site-install-docker-ci
 This step is not required for training but there would be tutorial 
 so if you would like to do hands on session, follow the instructions below.
 
-1. Create Gitlab account
-2. [Generate SSH key](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair) if you haven't done that before and add public key to Gitlab account.
-3. Create GitHub account
-4. [Generate SSH key](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair) if you haven't done that before and add public key to Gitlab account.
+1. Create [Gitlab]() account if you don't have one.
+2. [Generate SSH key](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair) if you haven't done so before and [add public key to Gitlab account](https://docs.gitlab.com/ee/ssh/README.html#adding-a-ssh-key-to-your-gitlab-account).
+3. [Create GitHub repository]() called `drupal-gtd-201808`
 
 ## Optional. Continuous delivery.
 
 1. Create Platfrom.sh account
-  * Click `Start free trial` on [Platfrom.sh home pgae](https://platform.sh/)
-2. [Generate SSH key](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair) if you haven't done that before and add public key to Platform account.
+  * Click `Start free trial` on [Platfrom.sh home pgae](https://platform.sh/) and register your account
+  * Create environment with Drupal 8 installed.
+2. [Generate SSH key](https://docs.gitlab.com/ee/ssh/README.html#generating-a-new-ssh-key-pair) if you haven't done so before in th previous step and [add public key to Platform account](https://docs.platform.sh/development/ssh.html).
