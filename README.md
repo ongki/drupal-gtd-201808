@@ -15,13 +15,13 @@
   ```
   
   If you can't see the versions, try to reinstall prerequisites.
-
+  
 2. Clone [current repository](https://gitlab.com/testudio/drupal-gtd-dev/)
   
   ```
   git clone git@gitlab.com:testudio/drupal-gtd-dev.git
   ```
-
+  
 3. Initialise containers
 
   ```
@@ -31,7 +31,7 @@
   ```
   
   You can now access [website](http://0.0.0.0:6060) and [phpMyAdmin](http://0.0.0.0:7070).
-
+  
 For more information see [documentation](./docs/README.md).
 
 ## Links
