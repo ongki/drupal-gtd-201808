@@ -26,7 +26,7 @@ git clone git@gitlab.com:testudio/drupal-gtd-dev.git
 
 ```
 cd drupal-gtd-dev
-drupal-compose up -d --build
+docker-compose up -d --build
 docker exec -it web composer install
 ```
 
