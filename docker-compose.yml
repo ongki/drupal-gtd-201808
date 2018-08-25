@@ -1,0 +1,35 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    volumes:
+      - datadgtddev:/var/lib/mysql
+    environment:
+      - MYSQL_USER=mysqlus3r
+      - MYSQL_PASSWORD=mysqlpa3s
+      - MYSQL_DATABASE=drupal8_dgtddev
+      - MYSQL_ROOT_PASSWORD=rootpa3s
+    restart: always
+  web:
+    image: testudio/drupal8-web-test:php7.2
+    container_name: web
+    links:
+      - mysql
+    ports:
+      - "80:80"
+#      - "443:443"
+    volumes:
+      - .:/var/app
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    links:
+      - mysql
+    environment:
+      - PMA_ARBITRARY=1
+    restart: always
+    ports:
+      - "7070:80"
+volumes:
+    datadgtddev:
