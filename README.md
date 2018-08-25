@@ -1,49 +1,38 @@
 # Drupal Global Training Day setup
 
-* [Documentation](./docs/README.md)
-
 ## Quick start
 
-For Ubuntu run 
+1. You need to install [docker](https://docs.docker.com/install/) and [docker compose](https://docs.docker.com/compose/install/).
+
+Once installed, you should be able to very by opening terminal (CLI) 
+on your machine and running
 
 ```
-sudo apt-get update
-
-sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    software-properties-common
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ docker -v
+Docker version 18.06.0-ce, build 0ffa825
+$ docker-compose -v
+docker-compose version 1.22.0, build f46880f
 ```
 
-And then read https://unix.stackexchange.com/questions/363048/unable-to-locate-package-docker-ce-on-a-64bit-ubuntu
+If you can't see the versions, try to reinstall prerequisites.
 
-Confirm installation
-
-```
-docker --version
-docker-compose --version
-```
+2. Clone [current repository](https://gitlab.com/testudio/drupal-gtd-dev/)
 
 ```
-git clone https://gitlab.com/testudio/drupal-gtd.git app
-cd app
-mkdir web
-docker-compose up -d --build
-echo "Hello" > web/index.html
+git clone git@gitlab.com:testudio/drupal-gtd-dev.git
 ```
 
-Check URL.
-
-Install Drupal
+3. Initialise containers
 
 ```
-rm -rf web
+cd drupal-gtd-dev
+drupal-compose up -d --build
 docker exec -it web composer install
-docker exec -it web composer site-install-docker-ci
 ```
+
+You can now access [website](http://0.0.0.0:6060) and [phpMyAdmin](http://0.0.0.0:7070).
+
+For more information see [documentation](./docs/README.md).
 
 ## Links
 
