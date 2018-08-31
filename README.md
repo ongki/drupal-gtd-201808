@@ -29,13 +29,34 @@
   docker-compose up -d --build
   docker exec -it webgtd composer install
   ```
+ 
   
   You can now access [website](http://0.0.0.0:6060) and [phpMyAdmin](http://0.0.0.0:7070).
   
   Database credentials can be found in `docker-compose.yml` file.
   
-For more information see [documentation](./docs/README.md).
+  For more information see [documentation](./docs/README.md).
+  
+## Debugging
+  
+Verify that all containers are running. Command ``
 
+```
+docker-compose ps
+```
+
+should return
+
+```
+   Name                 Command               State               Ports             
+------------------------------------------------------------------------------------
+mysql        docker-entrypoint.sh mysqld      Up      3306/tcp, 33060/tcp           
+phpmyadmin   /run.sh supervisord -n           Up      0.0.0.0:7070->80/tcp, 9000/tcp
+webgtd       docker-php-entrypoint apac ...   Up      0.0.0.0:6060->80/tcp   
+```
+
+`docker-compose logs` should give you more insight if you have any issues.
+  
 ## Links
 
 * [Drupal Global Training Day](https://groups.drupal.org/node/512931)

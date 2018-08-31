@@ -89,6 +89,9 @@
     ],
     "post-update-cmd": [
       "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ],
+    "site-install-docker": [
+      "./vendor/bin/drush --root=$(pwd)/web site-install standard -y --db-url='mysql://mysqlus3r:mysqlpa3s@mysql/drupal8_dgtddev'"
     ]
   },
   "extra": {
