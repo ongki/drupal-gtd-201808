@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publicdate
+    - node.type.book
+  module:
+    - datetime
+id: node.book.field_publicdate
+field_name: field_publicdate
+entity_type: node
+bundle: book
+label: 'Publication Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

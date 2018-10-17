@@ -1,0 +1,22 @@
+name: 'Library Au'
+type: module
+core: 8.x
+dependencies:
+  - ckeditor
+  - coffee
+  - datetime
+  - devel
+  - devel_generate
+  - ds
+  - editor
+  - features
+  - features_ui
+  - field
+  - filter
+  - menu_ui
+  - node
+  - path
+  - system
+  - text
+  - user
+version: 8.x-1.0

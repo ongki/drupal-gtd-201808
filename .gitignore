@@ -24,3 +24,4 @@
 # Dependency managers.
 /vendor/
 /node_modules/
+settings.json

@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the library users module.
+ */
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_install().
+ */
+function library_users_install() {
+  $librarian = User::create([
+    'name' => 'test-librarian',
+    'mail' => 'librarian@example.org',
+    'status' => '1',
+    'roles' => ['librarian'],
+  ]);
+  $librarian->save();
+}

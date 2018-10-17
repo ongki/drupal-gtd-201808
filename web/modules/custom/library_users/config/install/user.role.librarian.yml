@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: librarian
+label: Librarian
+weight: 3
+is_admin: null
+permissions:
+  - 'create book content'
+  - 'delete own book content'
+  - 'edit own book content'
+  - 'revert book revisions'
+  - 'use text format safe_html'
+  - 'view book revisions'
+  - 'view own unpublished content'

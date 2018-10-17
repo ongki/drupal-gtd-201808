@@ -35,6 +35,7 @@
     "drupal/diff": "^1.0@RC",
     "drupal/ds": "^3.1",
     "drupal/dynamic_entity_reference": "^2.0",
+    "drupal/editor_advanced_link": "^1.4",
     "drupal/entity_clone": "1.x-dev",
     "drupal/features": "^3.7",
     "drupal/field_group": "^1.0@RC",
@@ -91,7 +92,18 @@
       "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
     ],
     "site-install-docker": [
-      "./vendor/bin/drush --root=$(pwd)/web site-install standard -y --db-url='mysql://mysqlus3r:mysqlpa3s@mysql/drupal8_dgtddev'"
+      "./vendor/bin/drush --root=$(pwd)/web site-install standardau -y --db-url='mysql://mysqlus3r:mysqlpa3s@mysql/drupal8_dgtddev'",
+      "./vendor/bin/drush --root=$(pwd)/web config-set -y system.site name 'Sydney Library'",
+      "./vendor/bin/drush --root=$(pwd)/web en -y library_au",
+      "./vendor/bin/drush --root=$(pwd)/web uli"
+    ],
+    "site-create-librarian": [
+      "./vendor/bin/drush --root=$(pwd)/web en -y library_users",
+      "./vendor/bin/drush --root=$(pwd)/web devel-generate-content 50 --types='book'"
+    ],
+    "site-update": [
+      "./vendor/bin/drush --root=$(pwd)/web updatedb",
+      "./vendor/bin/drush --root=$(pwd)/web entity-update"
     ]
   },
   "extra": {

@@ -1,0 +1,10 @@
+name: 'Library users'
+type: module
+core: 8.x
+dependencies:
+  - library_au
+  - masquerade
+  - node
+  - user
+  - views
+version: 8.x-1.0
