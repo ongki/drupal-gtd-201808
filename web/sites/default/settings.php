@@ -41,14 +41,3 @@ if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
-
-$databases['default']['default'] = array (
-  'database' => 'drupal8_dgtddev',
-  'username' => 'mysqlus3r',
-  'password' => 'mysqlpa3s',
-  'prefix' => '',
-  'host' => 'mysql',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
