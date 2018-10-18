@@ -52,7 +52,3 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['hash_salt'] = '3GdSbr2OogaF0Rbdg6kGxt1JzBob3NXkKnb_snmwpxztvV3djKtQpGkSfIKxDDtMOpGyGHycSQ';
-
-$settings['trusted_host_patterns'] = array(
-    '^0\.0\.0\.0',
-  );
