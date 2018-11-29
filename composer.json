@@ -92,7 +92,7 @@
       "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
     ],
     "site-install-docker": [
-      "./vendor/bin/drush --root=$(pwd)/web site-install standardau -y --db-url='mysql://mysqlus3r:mysqlpa3s@mysql/drupal8_dgtddev'",
+      "./vendor/bin/drush --root=$(pwd)/web site-install standardau -y --db-url='mysql://mysqlus3r:mysqlpa3s@mysql/drupal8_dgtddev' --account-name=admin --account-pass=admin",
       "./vendor/bin/drush --root=$(pwd)/web config-set -y system.site name 'Sydney Library'",
       "./vendor/bin/drush --root=$(pwd)/web en -y library_au",
       "./vendor/bin/drush --root=$(pwd)/web uli"
@@ -104,6 +104,9 @@
     "site-update": [
       "./vendor/bin/drush --root=$(pwd)/web updatedb",
       "./vendor/bin/drush --root=$(pwd)/web entity-update"
+    ],
+    "drush-uli": [
+      "./vendor/bin/drush  --root=$(pwd)/web uli"
     ]
   },
   "extra": {
